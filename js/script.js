@@ -83,10 +83,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
   allCategoriesUrl,
-  function(responseText){document.querySelector("#main-content").innerHTML = responseText}, // ***** <---- TODO: STEP 1: Substitute [...] ****** // CEB
-  },
-  false); // Explicitly setting the flag to get JSON from server processed into an object literal
-});
+  buildAndShowCategoriesHTML); // Explicitly setting the flag to get JSON from server processed into an object literal
+
 // *** finish **
 
 
